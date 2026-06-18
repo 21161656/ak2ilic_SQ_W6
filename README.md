@@ -23,15 +23,15 @@ Restart: "R"
 | `assets/images/denyStampImage.png` |https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25 [2]|
 | `assets/images/dimitri.png` |https://papersplease.fandom.com/wiki/Dimitri [4]|
 | `assets/images/enemies.json` |https://learn.uwaterloo.ca/d2l/le/content/1265815/viewContent/6558094/View [8]|
-| `assets/images/ezic.png` |https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25 [2]|
-| `assets/images/obstacles.json` |https://papersplease.fandom.com/wiki/Dimitri [4]|
-| `assets/images/paper.webp` |https://papersplease.fandom.com/wiki/Dimitri [4]|
-| `assets/images/papershoot.mp3` |https://papersplease.fandom.com/wiki/Dimitri [4]|
-| `assets/images/papersplease.wav` |https://papersplease.fandom.com/wiki/Dimitri [4]|
-| `assets/images/paperspleasebackground.png` |https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25 [2]|
-| `assets/images/paperspleasecharacterspritesheet.png` |https://papersplease.fandom.com/wiki/Dimitri [4]|
-| `assets/images/playerhit.wav` |https://papersplease.fandom.com/wiki/Dimitri [4]|
-| `assets/images/shoot.wav` |https://papersplease.fandom.com/wiki/Dimitri [4]|
+| `assets/images/ezic.png` |https://steamcommunity.com/sharedfiles/filedetails/?l=czech&id=255683502 [7]|
+| `assets/images/obstacles.json` |https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b2 [2]|
+| `assets/images/paper.webp` |https://papersplease.fandom.com/wiki/Entry_permit [5]|
+| `assets/images/papershoot.mp3` |https://www.youtube.com/watch?v=z7-QeGdlRa8 [11]|
+| `assets/images/papersplease.wav` |https://www.youtube.com/watch?v=z7-QeGdlRa8 [11]|
+| `assets/images/paperspleasebackground.png` |https://wallpapercave.com/papers-please-wallpapers [9]|
+| `assets/images/paperspleasecharacterspritesheet.png` |https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25 [1]|
+| `assets/images/playerhit.wav` |https://www.youtube.com/watch?v=z7-QeGdlRa8 [11]|
+| `assets/images/shoot.wav` |https://www.youtube.com/watch?v=z7-QeGdlRa8 [11]|
 
 
 ## Refrences: 
