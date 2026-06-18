@@ -1,54 +1,76 @@
 # Week 6 Example 2 — Free Roam Top-Down with Boss Battle
 
-## What This Example Demonstrates
-
-> **Note for students:** This section is included in example files only to help you study. Do not include it in your Side Quest submissions.
-
-
-
-
-This example builds on Example 1 by replacing the auto-scrolling world with a free roam top-down world. The player moves freely across a large world and a smooth-follow camera keeps them in view. Enemy waves are triggered by the player's position. A minimap shows where enemies and the boss are at all times. A giant orange blob boss spawns when the player enters the boss zone at the top of the world.
-
-- **Free roam world** — the world is 1600×2000px; the player moves in world coordinates and is constrained to world boundaries with `constrain()`
-- **Smooth-follow camera** — `camX` and `camY` track the top-left of the visible area; `lerp()` moves the camera smoothly toward the player each frame; `translate(-camX, -camY)` shifts all world drawing into screen coordinates
-- **`push()` / `pop()` around translate** — everything inside draws in world coordinates; HUD and minimap are drawn after `pop()` in screen coordinates so they stay fixed on screen
-- **`loadJSON()`** — loads `data/enemies.json` in `preload()`; wave trigger positions, enemy speeds, and boss data all stored in one file
-- **Position-based wave triggers** — each wave has a `spawnAt` world Y value; `checkWaveSpawns()` compares `player.y` against each threshold; when the player moves above it the wave spawns
-- **Boss zone** — a glowing area at the top of the world; entering it calls `spawnBoss()` which builds the boss object from JSON data and switches to `STATE_BOSS`
-- **Boss state machine** — cycles through `"pausing"`, `"charging"`, `"retreating"`; charges at the player, overshoots, retreats to the top centre, pauses, repeats
-- **Minimap** — drawn in screen coordinates after `pop()`; uses `map()` to convert world positions to minimap positions; shows player (teal), enemies (orange), boss (red), and a camera viewport rectangle
-- **Two `lerpColor()` bars** — player health shifts green→red; boss health shifts orange→red
-- **Sound hooks** — all sound calls are commented out; hooks for shoot, hit, player hit, boss hit, boss music transition, and win
-- **B key** — skips directly to the boss fight for testing; calls `spawnBoss()` and moves the player into the boss zone
+## Project Title: Papers Please & Thankyou
 
 ## Setup and Interaction Instructions
 
-To run the sketch locally, open `index.html` in Google Chrome using Live Server.
+Open the link from you browser to play the game. 
+Mouse click your screen if you want music looping in the background.
+Shoot enemies and defeat the final boss with the highest score before your health runs out.
 
-**Controls:**
-- Move: WASD
-- Shoot: Spacebar (shoots in the direction you last moved)
-- B: Skip to boss fight (testing only)
-- Restart: R (after win or game over)
-
-Explore the world, survive enemy waves as you move north, then enter the glowing boss zone to fight the giant orange blob. Watch the minimap to track enemies off screen.
-
-**Adding Your Own Sounds**
-1. Add your sound files to `assets/sounds/`
-2. In `preload()`, uncomment the `loadSound()` lines and update the file paths
-3. Uncomment the `play()` or `loop()` calls in the relevant functions — there are hooks for the boss music transition too
-
-**Editing the Waves and Boss**
-Open `data/enemies.json` to change when waves spawn, how many enemies appear, their speed, and the boss stats. Each wave has a `spawnAt` world Y value — lower values trigger later since the player starts at the bottom of the world.
-
-**Opening the Chrome Console**
-- **Windows:** Press `F12` or `Ctrl + Shift + J`, then click the **Console** tab
-- **Mac:** Press `Cmd + Option + J`
+Controls
+Move left: "A" 
+Move right: "D" 
+Move up: "W"
+Move down: "S"
+Shoot: Space
+Restart: "R"
 
 ## Assets
 
-No external assets used. All visuals are generated with p5.js.
+| File | Source |
+|------|--------|
+| `assets/images/denyStampImage.png` |https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25 [2]|
+| `assets/images/dimitri.png` |https://papersplease.fandom.com/wiki/Dimitri [4]|
+| `assets/images/enemies.json` |https://learn.uwaterloo.ca/d2l/le/content/1265815/viewContent/6558094/View [8]|
+| `assets/images/ezic.png` |https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25 [2]|
+| `assets/images/obstacles.json` |https://papersplease.fandom.com/wiki/Dimitri [4]|
+| `assets/images/paper.webp` |https://papersplease.fandom.com/wiki/Dimitri [4]|
+| `assets/images/papershoot.mp3` |https://papersplease.fandom.com/wiki/Dimitri [4]|
+| `assets/images/papersplease.wav` |https://papersplease.fandom.com/wiki/Dimitri [4]|
+| `assets/images/paperspleasebackground.png` |https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25 [2]|
+| `assets/images/paperspleasecharacterspritesheet.png` |https://papersplease.fandom.com/wiki/Dimitri [4]|
+| `assets/images/playerhit.wav` |https://papersplease.fandom.com/wiki/Dimitri [4]|
+| `assets/images/shoot.wav` |https://papersplease.fandom.com/wiki/Dimitri [4]|
 
-## References
 
-N/A
+## Refrences: 
+
+[1] Papers Please Character Sprite Sheet. *Category: Characters*. 
+https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25
+
+[2] Papers Please Deny Stamp. *Category: Objects*. 
+https://chatgpt.com/c/6a32ec12-3584-83ea-88ab-dd4871df4b25
+
+[3] Papers Please Wiki. *Category: Characters*. 
+https://papersplease.fandom.com/wiki/Category:Characters
+
+[4] Papers Please Wiki. *Dimitri*. Fandom.
+https://papersplease.fandom.com/wiki/Dimitri
+
+[5] Papers Please Wiki. *Entry permit*. Fandom. 
+https://papersplease.fandom.com/wiki/Entry_permit
+
+[6] Photopea. *Photopea online photo editor*. 
+https://www.photopea.com/?utm_source=chatgpt.com
+
+[7] Steam Community. *Papers, Please guide*.
+https://steamcommunity.com/sharedfiles/filedetails/?l=czech&id=255683502
+
+[8] University of Waterloo. (2026). *Week 6 Example 2 — Free Roam Top-Down with Boss Battle* [Course material]. LEARN. https://learn.uwaterloo.ca/d2l/le/content/1265815/viewContent/6558094/View
+
+[9] Wallpapercave. *Papers, Please wallpapers*. 
+https://wallpapercave.com/papers-please-wallpapers
+
+[10] YouTube. SKILLS TO PAY THE BILLS! | Papers, Please.
+https://www.youtube.com/watch?v=wQa1kwp5pgc&list=PL4vF-TxbCczLhA3J7QKOztQCwhrlfNMQW
+
+[11] YouTube. Papers, Please - Sound Files. 
+https://www.youtube.com/watch?v=z7-QeGdlRa8
+
+
+
+
+
+
+
